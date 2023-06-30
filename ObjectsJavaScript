@@ -1,0 +1,22 @@
+///create message of retreat
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+
+
+// create an object alienShip with methods retreat() and takeOff()
+let alienShip =
+{
+retreat() {
+console.log(retreatMessage)
+},
+///second method name and method
+takeOff() {console.log('Spim... Borp... Glix... Blastoff!')}
+};
+
+///invoke the methods on object
+alienShip.retreat()
+alienShip.takeOff()
+
+
+///Output:
+///We no longer wish to conquer your planet. It is full of dogs, which we do not care for.
+///Spim... Borp... Glix... Blastoff!
