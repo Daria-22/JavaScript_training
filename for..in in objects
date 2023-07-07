@@ -1,0 +1,42 @@
+let spaceship = {
+    crew: {
+    captain: { 
+        name: 'Lily', 
+        degree: 'Computer Engineering', 
+        cheerTeam() { console.log('You got this!') } 
+        },
+    'chief officer': { 
+        name: 'Dan', 
+        degree: 'Aerospace Engineering', 
+        agree() { console.log('I agree, captain!') } 
+        },
+    medic: { 
+        name: 'Clementine', 
+        degree: 'Physics', 
+        announce() { console.log(`Jets on!`) } },
+    translator: {
+        name: 'Shauna', 
+        degree: 'Conservation Science', 
+        powerFuel() { console.log('The tank is full!') } 
+        }
+    }
+}; 
+
+// Write your code below
+//what I did here? 
+//1. used for ...loop for interating through the inner object crew in outer object spaceship 
+//2. declared a variable for iteraton for spaceship(outer object).crew(inner object) 
+//2. then logged this variable (crewMember) and the attributes for this variable - which I reached with dot abd bracket notation - not really clear here
+
+//tip:
+//for (let variableName in outerObject.innerObject) {
+//  console.log(`${variableName}: ${outerObject.innerObject[variableName].propertyName}`)
+//};
+
+for (let crewMember in spaceship.crew) {
+  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`)
+};
+
+for (let crewMember in spaceship.crew) {
+  console.log(`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`)
+};
