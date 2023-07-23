@@ -1,0 +1,34 @@
+//initial robot data
+const robot = {
+	model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-plated',
+  energyLevel: 75
+};
+
+
+//using method Object.keys(name_of_object) - will get only keys in an array
+const robotKeys = Object.keys(robot);
+console.log(robotKeys);
+//output [ 'model', 'mobile', 'sentient', 'armor', 'energyLevel' ]
+
+
+
+//using method Object.entries(name_of_object) - will get the keys and their values in a form of an array
+const robotEntries = Object.entries(robot)
+console.log(robotEntries);
+//output
+//[ [ 'model', 'SAL-1000' ],
+//[ 'mobile', true ],'''
+//[ 'sentient', false ],
+//[ 'armor', 'Steel-plated' ],
+//[ 'energyLevel', 75 ] ]
+
+
+
+// Declare newRobot and with method Object.assign(target,source) assign the keys and values of source object to keys and values of target object
+
+const newRobot= Object.assign (
+{laserBlaster: true, voiceRecognition: true}, robot)
+console.log(newRobot);
