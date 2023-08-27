@@ -1,13 +1,30 @@
-// create a class- capital letter
 class Surgeon {
-    constructor(name, department) { //constructor (parameters)
-      this.name = name; //this. -like self in Python - we say that for this constructor we take the name which is entered as a parameter
-      this.department = department;
-    }
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
   }
   
-  //creating an instance of class Surgeon - with other parameters
-  surgeonRomero = new Surgeon("Francisco Romero", "Cardiovascular")
-  // creating an instance of class Surgeon - with other parameters
-  surgeonJackson = new Surgeon ('Ruth Jackson', 'Orthopedics')
+  get name() {
+    return this._name;
+  }
   
+  get department() {
+    return this._department;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+const surgeonRomero = new Surgeon('Francisco Romero', 'Cardiovascular');
+const surgeonJackson = new Surgeon('Ruth Jackson', 'Orthopedics');
+
+console.log(surgeonRomero.name);
+surgeonRomero.takeVacationDays(3);
+console.log(surgeonRomero.remainingVacationDays)
