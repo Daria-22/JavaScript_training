@@ -18,6 +18,11 @@ return result;
 }
 doubleNumbers`the numbers ${1} and ${2}`;
 
+/*GOAL:
+'the numbers 2 and 4'
+YOURS:
+'the numbers 2 and 4'*/
+
 
 /*Here's a step-by-step breakdown of how the doubleNumbers function processes the template literal:
 
