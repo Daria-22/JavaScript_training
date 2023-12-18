@@ -1,0 +1,3 @@
+function excite(strings) {
+  return strings.map(string => string + "!");
+}
