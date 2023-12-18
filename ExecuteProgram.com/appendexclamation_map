@@ -1,3 +1,25 @@
 function excite(strings) {
   return strings.map(string => string + "!");
 }
+excite(['a', 'b', 'c']);
+Expected: ['a!', 'b!', 'c!'] OK!
+
+>
+excite(['A cat']);
+Expected: ['A cat!'] OK!
+
+>
+excite(['A cat', 'And a dog']);
+Expected: ['A cat!', 'And a dog!'] OK!
+
+>
+excite(['']);
+Expected: ['!'] OK!
+
+>
+excite([]);
+Expected: [] OK!
+
+>
+excite.toString().includes('map');
+Expected: true OK!
