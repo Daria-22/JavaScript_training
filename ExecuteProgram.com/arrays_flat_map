@@ -1,0 +1,14 @@
+const users = [
+  {name: 'Amir', emails: ['amir@example.com', 'amir2@example.com']},
+  {name: 'Betty', emails: ['betty@example.com']}
+];
+//must create a const as map does not change te array, it only iterates through it
+const emails = users.map(user => user.emails);
+//better to create another one for better4 control of steps, but I wonder if I use map and flat at the same time?
+const flat_emails = emails.flat();
+flat_emails;
+/*GOAL:
+['amir@example.com', 'amir2@example.com', 'betty@example.com']
+YOURS:
+['amir@example.com', 'amir2@example.com', 'betty@example.com']
+*/
