@@ -12,3 +12,12 @@ flat_emails;
 YOURS:
 ['amir@example.com', 'amir2@example.com', 'betty@example.com']
 */
+
+/* turns out it is possible:
+[
+  {numbers: [1, 2]},
+  {numbers: [3, 4]},
+].map(obj => obj.numbers).flat();
+RESULT:
+[1, 2, 3, 4]
+*/
