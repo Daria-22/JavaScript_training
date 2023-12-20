@@ -13,6 +13,7 @@ YOURS:
 ['amir@example.com', 'amir2@example.com', 'betty@example.com']
 */
 
+
 /* turns out it is possible:
 [
   {numbers: [1, 2]},
@@ -20,4 +21,23 @@ YOURS:
 ].map(obj => obj.numbers).flat();
 RESULT:
 [1, 2, 3, 4]
+*/
+
+[
+  {numbers: [1, 2]},
+  {numbers: [3, 4]},
+].flatMap(obj => obj.numbers);
+RESULT:
+[1, 2, 3, 4]
+
+const users = [
+  {name: 'Amir', emails: ['amir@example.com', 'amir2@example.com']},
+  {name: 'Betty', emails: ['betty@example.com']}
+];
+const emails = users.flatMap(obj => obj.emails);
+emails;
+/*GOAL:
+['amir@example.com', 'amir2@example.com', 'betty@example.com']
+YOURS:
+['amir@example.com', 'amir2@example.com', 'betty@example.com']
 */
