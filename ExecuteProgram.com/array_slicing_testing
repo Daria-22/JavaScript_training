@@ -2,3 +2,36 @@ function copyArray(array) {
   const copiedArray =array.slice();
   return copiedArray;
 }
+
+/*
+>
+copyArray([]);
+Expected: [] OK!
+
+>
+copyArray(['a', 'b']);
+Expected: ['a', 'b'] OK!
+
+>
+copyArray([null, undefined, false]);
+Expected: [null, undefined, false] OK!
+
+>
+const original = ['a', 'b'];
+const copy = copyArray(original);
+copy.push('c');
+original;
+Expected: ['a', 'b'] OK!
+
+>
+const original = ['a', 'b'];
+const copy = copyArray(original);
+original.push('c');
+copy;
+Expected: ['a', 'b'] OK!
+
+>
+// You must use slice.
+copyArray.toString().includes('slice');
+Expected: true OK!
+*/
