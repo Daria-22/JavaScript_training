@@ -1,0 +1,41 @@
+/*
+Use .slice to write a function takeFirst(arr, n). It should return a new array of the first n elements of arr. 
+If n is larger than the array's length, it should return a copy of the array.
+Don't worry about negative n
+*/
+
+function takeFirst(arr, n) 
+{
+  const copiedArray = arr.slice(0,n)
+  return copiedArray;
+}
+
+/*
+takeFirst([1, 2, 3], 0);
+Expected: [] OK!
+
+>
+takeFirst([1, 2, 3], 1);
+Expected: [1] OK!
+
+>
+takeFirst([1, 2, 3], 2);
+Expected: [1, 2] OK!
+
+>
+takeFirst([1, 2, 3], 5);
+Expected: [1, 2, 3] OK!
+
+>
+const original = [1, 2, 3];
+const copy = takeFirst(original, 2);
+original.push(3);
+copy;
+Expected: [1, 2] OK!
+
+>
+// You must use slice.
+takeFirst.toString().includes('slice');
+Expected: true OK!
+
+*/
