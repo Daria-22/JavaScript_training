@@ -1,0 +1,4 @@
+function copyArray(array) {
+  const copiedArray =array.slice();
+  return copiedArray;
+}
