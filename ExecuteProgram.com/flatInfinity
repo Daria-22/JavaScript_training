@@ -1,0 +1,13 @@
+
+[
+  [
+    1,
+    [
+      2,
+    ],
+  ],
+  {name: 'Ms. Fluff', vaccinated: true},
+].flat(Infinity);
+/*RESULT:[1, 2, {name: 'Ms. Fluff', vaccinated: true}]
+syntax: array.flat(Infinity) will make the array flat, but not objects
+*/
