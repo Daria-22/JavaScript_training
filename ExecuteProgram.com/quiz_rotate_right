@@ -1,0 +1,45 @@
+/*task:
+Write a rotate function. It should move the last element to the beginning of the array. The function should modify the original array.
+
+You'll need to handle the special case when an array is empty (with a length of 0.) When rotate gets an empty array, it should also return an empty array.
+*/
+
+/*I had the idea - get the length, add last element to the beginning and then cut off the end which will be equal to length, 
+but I did it with Chat GPT, because I did not really understand how */
+
+
+//name the function, provide the parameter - array
+function rotate(arr) 
+{
+    //get the length of the array
+    const length = arr.length;
+
+    // If the array is empty, return an empty array
+    if (length === 0) 
+   {
+        return arr;
+    }
+    // get the last element in the array, its index will be -1 as indexation start with 0
+    const lastElement = arr[length - 1];
+
+    // Move elements from the end to the beginning
+    // we start with the element whose index is length -1, then if it is not less or equal to 0, we subtract 
+    ///from the index 1 and move to the next element which will be index -1 each time
+    // the iteration stops when the index is 0
+    for (let i = length - 1; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+
+    // During this iteration, we add LastElement to the start of the array
+    ///Add the last element to the beginning
+    arr[0] = lastElement;
+
+   //when iteration is over, we remove the remaining elements
+
+    // Remove the remaining elements
+    arr.splice(length);
+    // Alternatively, you can use arr.length = length; to remove the remaining elements
+
+    // If you want to return the modified array 
+    return arr;
+}
