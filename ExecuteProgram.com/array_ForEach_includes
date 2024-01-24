@@ -1,0 +1,13 @@
+function uniq(arr) {
+    // Create a new array to store unique values
+    const uniqueArray = [];
+
+    arr.forEach((item) => {
+        // Check if the item is not already in the uniqueArray
+        if (!uniqueArray.includes(item)) {
+            uniqueArray.push(item);
+        }
+    });
+
+    return uniqueArray;
+}
