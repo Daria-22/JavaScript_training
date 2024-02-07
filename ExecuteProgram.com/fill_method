@@ -1,0 +1,22 @@
+//The .fill method replaces each of an array's existing values with one value, how many elements - so many identical element there will be
+
+const a = [1, 2];
+a.fill(3);
+//RESULT:
+//[3, 3]
+
+//create an array with wanted length and then fill it with necessary element:
+const size = 1 + 2;
+new Array(size).fill('d');
+//RESULT:
+///['d', 'd', 'd']
+
+//create new array and fill it with value:
+function newAndFill(size, value) {
+  return new Array(size).fill(value);
+}
+newAndFill(2, 'd');
+
+/* Here's a concrete example of how we might use this technique. The progress bar at the top of this lesson is made of many divs. 
+As the developers of Execute Program itself, we know how many paragraphs and code examples exist in the lesson. 
+We create that many divs to form the progress bar. This is done using the new Array(...).fill(...) method shown here! */
