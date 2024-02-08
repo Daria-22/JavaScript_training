@@ -2,3 +2,35 @@ function find(arr, callback) {
   const index = arr.findIndex(callback);
   return index !== -1 ? arr[index] : undefined;
 }
+/*
+>
+find([1, 2, 3], n => n === 1);
+Expected: 1 OK!
+
+>
+find([5, 6, 7], n => n / 2 === 3);
+Expected: 6 OK!
+
+>
+find([1, 2, 3], n => n > 5);
+Expected: undefined OK!
+
+>
+find([], n => n > 5);
+Expected: undefined OK!
+
+>
+find([null], n => n === null);
+Expected: null OK!
+
+>
+const arr = [1, 2];
+arr[-1] = 3;
+find(arr, n => n === 5);
+Expected: undefined OK!
+
+>
+// You must use findIndex.
+find.toString().includes('findIndex');
+Expected: true OK!
+*/
