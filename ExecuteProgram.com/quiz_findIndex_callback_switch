@@ -1,0 +1,4 @@
+function find(arr, callback) {
+  const index = arr.findIndex(callback);
+  return index !== -1 ? arr[index] : undefined;
+}
