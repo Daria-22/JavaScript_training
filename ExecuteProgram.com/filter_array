@@ -1,0 +1,8 @@
+const arrays = [
+  [1, 2],
+  [2, 3],
+  [3, 4],
+];
+arrays.filter(array => array.includes(2));
+RESULT:
+[[1, 2], [2, 3]]
