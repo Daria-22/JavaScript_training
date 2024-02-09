@@ -1,0 +1,31 @@
+///option1 with for
+const users = [
+  {name: 'Amir', admin: true},
+  {name: 'Betty', admin: false},
+];
+
+const admins = [];
+for (let i=0; i<users.length; i++) {
+  const user = users[i];
+  if (user.admin) {
+    admins.push(user);
+  }
+}
+
+admins.map(user => user.name);
+//RESULT:
+//['Amir']
+
+
+///option2 with .filter: filter takes array with a callback function, call it for each element
+//if function returns true, then 
+const users = [
+  {name: 'Amir', admin: true},
+  {name: 'Betty', admin: false},
+];
+
+const admins = users.filter(
+  user => user.admin
+);
+
+admins.map(user => user.name);
