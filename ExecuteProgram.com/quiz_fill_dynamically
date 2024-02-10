@@ -1,0 +1,29 @@
+/*
+Write a function fillDynamically(value, length). It should construct a new array of length filled with value
+*/.
+
+function fillDynamically(value, length) {
+  const undefArray = new Array(length);
+  const filledArray = undefArray.fill(value);
+  return filledArray;
+}
+
+testing: fillDynamically('d', 3);
+Expected: ['d', 'd', 'd'] OK!
+
+>
+fillDynamically('d', 1);
+Expected: ['d'] OK!
+
+>
+fillDynamically('a', 4);
+Expected: ['a', 'a', 'a', 'a'] OK!
+
+>
+fillDynamically('d', 0);
+Expected: [] OK!
+
+>
+// You must "new" a fixed-size array.
+fillDynamically.toString().includes('new Array');
+Expected: true OK!
