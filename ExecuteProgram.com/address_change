@@ -1,0 +1,6 @@
+const address = {street: '12 Maple St'};
+const oldRecord = [address];
+const newRecord = oldRecord.slice();
+newRecord[0] = {street: '14 Oak St'};
+[oldRecord[0].street, newRecord[0].street];
+//RESULT: ['12 Maple St', '14 Oak St']
