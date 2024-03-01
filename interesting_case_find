@@ -1,0 +1,7 @@
+const users = [
+  {name: 'Amir', admin: false},
+  {name: 'Betty', admin: true},
+];
+users.find(user => user.admin).name;
+RESULT:
+'Betty'
