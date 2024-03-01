@@ -1,0 +1,27 @@
+function count(arr, callback) {
+  let counter = 0;
+  
+  arr.forEach(element => {
+    if (callback(element)) {
+      counter += 1;
+    }
+  });
+  
+  return counter;
+}
+
+[
+  count([1, 2, 3, 4], e => e === 3),
+  count([1, 2, 3, 4], e => e > 1),
+  count([2, 1, 4, 5, 2, 8], e => e === 2),
+  count(['a', 'b'], e => e === 'd'),
+  count([], e => e === 'd'),
+];
+
+/*
+  1. make a counter of the elements, outside of function
+  2. give array to forEach function which will iterate through all elements of the array and perform with it what we say
+  3. what we say? - is callback function finds element which is equal to e, then add counter
+  4. close the arrow function
+  5. ask to return how many were counted
+*/
