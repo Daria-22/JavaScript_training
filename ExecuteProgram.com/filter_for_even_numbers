@@ -1,0 +1,29 @@
+function evens(arr) {
+  let result_filtering = arr.filter(number => number % 2 === 0) 
+  {
+  return result_filtering;
+}
+}
+
+/*tests
+>
+evens([1, 2, 3, 4]);
+Expected: [2, 4] OK!
+
+>
+evens([1, 2, 3]);
+Expected: [2] OK!
+
+>
+evens([2, 4, 6, 8]);
+Expected: [2, 4, 6, 8] OK!
+
+>
+evens([]);
+Expected: [] OK!
+
+>
+// You must use filter.
+evens.toString().includes('filter');
+Expected: true OK!
+*/
