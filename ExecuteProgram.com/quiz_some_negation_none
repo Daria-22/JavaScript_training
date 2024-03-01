@@ -1,0 +1,30 @@
+function none(arr, callback) {
+  let true_false = !arr.some(element => callback(element))
+  return true_false ;
+}
+
+
+>
+none([1, 2, 4], n => n === 3);
+Expected: true OK!
+
+>
+none([1, 2], n => n === 2);
+Expected: false OK!
+
+>
+none(['a', 'bc', 'def'], s => s.length === 0);
+Expected: true OK!
+
+>
+none([], s => false);
+Expected: true OK!
+
+>
+none([], s => true);
+Expected: true OK!
+
+>
+// You must use some.
+none.toString().includes('some');
+Expected: true OK!
