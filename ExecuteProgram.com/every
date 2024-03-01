@@ -1,0 +1,15 @@
+
+['a', 'bc', 'def'].every(string => string.length > 0);
+RESULT:
+true
+
+[9, 10, 11].every(n => n >= 10);
+RESULT:
+false
+
+.every always returns true for an empty array. One way to remember this is that .every's behavior for empty arrays is the opposite of .some's behavior.
+
+[].every(f) is true, no matter what f is.
+[].some(f) is false, no matter what f is.
+
+Continue
