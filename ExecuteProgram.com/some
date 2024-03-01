@@ -6,3 +6,15 @@ true
   string => string.length === 0);
 RESULT:
 false
+
+//for making sure that there aren't elements like this
+!['a', 'bc', 'def'].some(string => string.length === 0);
+
+/*
+function none(array, callback) {
+  return !array.some(callback);
+}
+none(['a', 'bc', 'def'], string => string.length === 0);
+RESULT:
+true
+*/
