@@ -1,0 +1,8 @@
+[1, 2, 3].some(n => n === 2);
+RESULT:
+true
+
+['a', 'bc', 'def'].some(
+  string => string.length === 0);
+RESULT:
+false
