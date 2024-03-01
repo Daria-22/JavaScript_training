@@ -1,0 +1,4 @@
+const strings = ['a', 'b', 'c', 'd'];
+strings.push('e');
+
+/* I thought that the return of this code will be ['a', 'b', 'c', 'd'], but actually the return was 5, because push adds and counts?
