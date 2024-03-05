@@ -1,1 +1,47 @@
+function filter(arr, callback) {
+  const newArr = [];
+  arr.forEach
+    (element => {
+      if (callback(element)) {
+    newArr.push(element);
+       }
+    }) ;
+  return newArr;
+}
 
+
+/*
+tests:
+
+>
+filter([1, 2, 3], n => n >= 0);
+Expected: [1, 2, 3] OK!
+
+>
+filter([1, 2, 3], n => n > 1);
+Expected: [2, 3] OK!
+
+>
+filter([1, 2, 3], n => n > 5);
+Expected: [] OK!
+
+>
+filter([null, undefined], n => true);
+Expected: [null, undefined] OK!
+
+>
+filter([], n => true);
+Expected: [] OK!
+
+>
+// You must use `.forEach`.
+filter.toString().includes('forEach');
+Expected: true OK!
+
+>
+// You must use a stack function.
+const code = filter.toString();
+code.includes('pop') || code.includes('push');
+Expected: true OK!
+
+*/
