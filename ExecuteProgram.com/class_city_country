@@ -1,0 +1,13 @@
+class Cat 
+  {constructor(name, age)
+   {this.name = name;
+  this.age = age};
+  }
+
+[
+  new Cat('Ms. Fluff', 4),
+  new Cat('Keanu', 2),
+];
+
+///Output: 
+[{name: 'Ms. Fluff', age: 4}, {name: 'Keanu', age: 2}]
