@@ -1,0 +1,33 @@
+function compact(arr) {
+  let newArray = arr.filter(arrElem => arrElem !== null)
+    return newArray;
+}
+
+>
+compact([null]);
+Expected: [] OK!
+
+>
+compact([1, 2, 3]);
+Expected: [1, 2, 3] OK!
+
+>
+compact([1, null, 2, 3, null]);
+Expected: [1, 2, 3] OK!
+
+>
+compact([]);
+Expected: [] OK!
+
+>
+compact([undefined]);
+Expected: [undefined] OK!
+
+>
+compact([false, undefined]);
+Expected: [false, undefined] OK!
+
+>
+// You must use filter.
+compact.toString().includes('filter');
+Expected: true OK!
