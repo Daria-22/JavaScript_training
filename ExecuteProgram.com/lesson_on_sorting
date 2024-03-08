@@ -1,0 +1,78 @@
+const strings = ['c', 'a', 'b'];
+strings.sort();
+strings;
+//output: ['a', 'b', 'c'] !! modifid the array
+
+//to leave the array not modified, make a copy with a slide:
+const originalStrings = ['c', 'a', 'b'];
+const sortedStrings = originalStrings.slice().sort();
+sortedStrings;
+//RESULT:
+//['a', 'b', 'c']
+
+
+////Whaaat?
+/*JavaScript often converts values in surprising ways. 
+For example, 10 > 3 is true, but '10' < '3' is also true. 
+This is because strings are compared character by character. 
+The comparison ends as soon as two characters differ. 
+'1' < '3', so '10' < '3'. The '0' in '10' is never even examined.
+*/
+
+'3' > '10';
+//RESULT:
+//true
+
+//.sort converts the array's elements to strings, then compares them. Because it compares strings, it inherits the comparison problem above.
+//This makes JavaScript's .sort unsafe for numbers and most other data. Most other programming languages don't have this problem, so be careful!
+
+[3, 10].sort();
+//RESULT:
+///[10, 3]   OMG!!!
+
+//There's a way to fix this problem. We can write our own comparison function, then give it to .sort.
+//The .sort function will call our comparison function repeatedly. Each time, our function gets two array elements (a, b) as arguments and returns:
+//0 if the two elements are equal.
+//A number greater than zero if a is greater.
+//A number smaller than zero if b is greater.
+/*To start, .sort will call our function with the values at indexes 1 and 0 in the array. 
+Then it will continue to pass other pairs of array elements as it determines what the sorted order should be.
+Our comparison function only needs to determine which of two elements is greater, which is a relatively simple problem. 
+By calling our comparison function over and over again, .sort eventually solves the more difficult problem of sorting the entire array.
+*/
+
+//I find it difficult to understand it
+[10, 200, 3].sort((a, b) => {
+  if (a === b) {
+    return 0;
+  } else if (a > b) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+RESULT:
+[3, 10, 200]
+
+///less wordly
+
+[10, 200, 3].sort((a, b) => a - b);
+
+//We can use the comparison function for more than just numbers. For example, we can sort arrays by their lengths.
+
+
+[[0, 0], [], [0, 0, 0], [0]].sort((a, b) => a.length - b.length);
+
+///output [[], [0], [0, 0], [0, 0, 0]]
+
+sorting of properties:
+const users = [
+  {name: 'Amir', loginAttempts: 5},
+  {name: 'Betty', loginAttempts: 3}
+];
+users.sort((user1, user2) => {
+  return user1.loginAttempts - user2.loginAttempts;
+}).map(user => user.name);
+RESULT:
+['Betty', 'Amir']
+
