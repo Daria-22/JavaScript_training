@@ -34,3 +34,34 @@ function hasNull(arr) {
 function hasNull(arr) {
   return arr.indexOf(null) !== -1;
 }
+
+//for testing
+/* >
+hasNull([null, null]);
+Expected: true OK!
+
+>
+hasNull([1, null, 3]);
+Expected: true OK!
+
+>
+hasNull([1, 2, 3]);
+Expected: false OK!
+
+>
+hasNull([]);
+Expected: false OK!
+
+>
+hasNull([undefined]);
+Expected: false OK!
+
+>
+hasNull(['null']);
+Expected: false OK!
+
+>
+// You must use some.
+hasNull.toString().includes('some');
+Expected: true OK!
+*/
