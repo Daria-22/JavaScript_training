@@ -1,0 +1,36 @@
+function hasNull(arr) {
+  if (arr.length > 0) {
+    return arr.some(arrelem => arrelem === null);
+  } else {
+    return false;
+  }
+}
+
+//map - not good, good for changing the array
+//some -good,
+
+//other methods to find null values - forEch
+
+function hasNull(arr) {
+  let foundNull = false;
+  arr.forEach(arrelem => {
+    if (arrelem === null) {
+      foundNull = true;
+    }
+  });
+  return foundNull;
+}
+
+//other methods to find null values - filter
+function hasNull(arr) {
+  return arr.filter(arrelem => arrelem === null).length > 0;
+}
+
+//includes
+function hasNull(arr) {
+  return arr.includes(null);
+
+//indexOf
+function hasNull(arr) {
+  return arr.indexOf(null) !== -1;
+}
