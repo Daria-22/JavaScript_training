@@ -21,3 +21,29 @@ return acc;
     }, []);
   }
 
+/*
+>
+filter([1, 2, 3], n => n >= 0);
+Expected: [1, 2, 3] OK!
+
+>
+filter([1, 2, 3], n => n > 1);
+Expected: [2, 3] OK!
+
+>
+filter([1, 2, 3], n => n > 5);
+Expected: [] OK!
+
+>
+filter([null, undefined], n => true);
+Expected: [null, undefined] OK!
+
+>
+filter([], n => true);
+Expected: [] OK!
+
+>
+// You must use reduce.
+filter.toString().includes('reduce');
+Expected: true OK!
+*/
