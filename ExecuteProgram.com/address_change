@@ -4,3 +4,5 @@ const newRecord = oldRecord.slice();
 newRecord[0] = {street: '14 Oak St'};
 [oldRecord[0].street, newRecord[0].street];
 //RESULT: ['12 Maple St', '14 Oak St']
+//we can't change the const
+//but we can access the address by assigning an object to object in array??
