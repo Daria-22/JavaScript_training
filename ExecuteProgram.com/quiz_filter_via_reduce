@@ -1,0 +1,23 @@
+//function takes an array - arr and a callbac function
+function filter(arr, callback) 
+
+//body of function
+{
+  
+//the function will return result of array which will be reduced
+//it means acc- the result of callback function, current - an element from array
+
+return arr.reduce(
+    (acc, current) => {
+
+//if the element from array matches the condition of fallback
+        if (callback(current))
+
+//then this element will be added to the array
+        {acc.push(current);}
+// and from here I don't understand God bless me :)
+
+return acc;
+    }, []);
+  }
+
