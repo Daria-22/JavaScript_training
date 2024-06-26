@@ -9,3 +9,38 @@ Ok, what it did wrong:
 1. did not include if for empty array
 2. made arr.reduce(a,b)=> a + separator + b, but for some reason returned arr, not the result of arr.reduce(a,b)=> a + separator + b
 */
+
+/*
+testing
+join(['a'], ',');
+Expected: 'a' OK!
+
+>
+join(['a', 'b'], ',');
+Expected: 'a,b' OK!
+
+>
+join(['a', 'b', 'c'], '');
+Expected: 'abc' OK!
+
+>
+join(['a', 'b', 'c', 'd'], 'x');
+Expected: 'axbxcxd' OK!
+
+>
+join(['a', 'b'], 'COMMA');
+Expected: 'aCOMMAb' OK!
+
+>
+join(['', '', ''], ',');
+Expected: ',,' OK!
+
+>
+join([], ',');
+Expected: '' OK!
+
+>
+// You must use reduce.
+join.toString().includes('reduce');
+Expected: true OK!
+*/
