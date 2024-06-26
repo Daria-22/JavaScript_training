@@ -3,3 +3,9 @@ function join(arr, separator) {
     return  ''}
   else {return arr.reduce((a,b)=> a + separator + b)};
 }
+
+/*
+Ok, what it did wrong:
+1. did not include if for empty array
+2. made arr.reduce(a,b)=> a + separator + b, but for some reason returned arr, not the result of arr.reduce(a,b)=> a + separator + b
+*/
