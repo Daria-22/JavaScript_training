@@ -1,0 +1,48 @@
+Review:
+what I understand:
+//reduce will compare 1 and 200, leave 200, then 200 and 30 and leave 200
+[1, 200, 30].reduce((acc, current) => Math.max(acc, current));
+//RESULT:200
+
+//includes checks if the condition is met, when met, makes a new array
+const arrays = [
+  [1, 2],
+  [2, 3],
+  [3, 4],
+];
+arrays.filter(array => array.includes(2));
+//RESULT:[[1, 2], [2, 3]]
+
+//iterate through people and add each name to empty array, to get exatly name person.name dot notation is used
+const people = {name: 'Cindy'},
+  {name: 'Dalili'},
+];
+
+const names = [];
+people.forEach(person => {
+  names.push(person.name);
+});
+names;
+//RESULT:['Cindy', 'Dalili']
+
+// new Array will be filled with undefined
+0 in new Array(1);
+//RESULT: false
+
+//just position the array elements in a reverse order
+const a = [3, 2, 1];
+a.reverse();
+RESULT:[1, 2, 3]
+
+
+//don't understand:
+const array = [];
+array[2] = 1;
+1 in array;
+RESULT:false
+//why false if it should be undefined??
+
+
+//why sort and arrow function??
+[10, 200, 3].sort((a, b) => a - b);
+RESULT:[3, 10, 200]
