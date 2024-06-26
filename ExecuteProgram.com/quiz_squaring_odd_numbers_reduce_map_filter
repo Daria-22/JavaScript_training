@@ -1,0 +1,80 @@
+//correct code 
+function sumSquaresOfOddNumbers(arr) {
+  const newArrayOddNumbers = arr.filter(element => element % 2 === 1);
+
+  // Using map to square each odd number
+  const squaredOddNumbers = newArrayOddNumbers.map(oddNumber => oddNumber ** 2);
+
+  // Using reduce to sum up the squared odd numbers
+  const sumOfSquares = squaredOddNumbers.reduce((acc, squared) => acc + squared, 0);
+
+  return sumOfSquares;
+}
+
+//my code
+function sumSquaresOfOddNumbers(arr) 
+{
+  const newArrayOddNumbers = arr.filter(element => element % 2 === 1);
+  //return newArrayOddNumbers;
+  if(newArrayOddNumbers.length > 0) {
+  const listOddSquared = newArrayOddNumbers.reduce((squared, oddNumber) => squared + oddNumber **2, 0)
+  return listOddSquared}
+  else {return 0}
+  
+}
+
+//I did not use map, because I went straight to reduce, as it iterates anyway, however, map allows to make a separate
+///step for squaring and then reduce allows to make a separate step for adding, which is more structural approach (chat GPT said so)
+
+
+/* testing 
+sumSquaresOfOddNumbers([0, 0]);
+Expected: 0 OK!
+
+>
+sumSquaresOfOddNumbers([3]);
+Expected: 9 OK!
+
+>
+sumSquaresOfOddNumbers([4]);
+Expected: 0 OK!
+
+>
+sumSquaresOfOddNumbers([5]);
+Expected: 25 OK!
+
+>
+sumSquaresOfOddNumbers([1, 2]);
+Expected: 1 OK!
+
+>
+sumSquaresOfOddNumbers([1, 2, 3]);
+Expected: 10 OK!
+
+>
+sumSquaresOfOddNumbers([1, 2, 3, 4, 5]);
+Expected: 35 OK!
+
+>
+sumSquaresOfOddNumbers([2, 2, 2, 2]);
+Expected: 0 OK!
+
+>
+sumSquaresOfOddNumbers([]);
+Expected: 0 OK!
+
+>
+// You must use filter.
+sumSquaresOfOddNumbers.toString().includes('filter');
+Expected: true OK!
+
+>
+// You must use map.
+sumSquaresOfOddNumbers.toString().includes('map');
+Expected: true OK!
+
+>
+// You must use reduce.
+sumSquaresOfOddNumbers.toString().includes('reduce');
+Expected: true OK!
+*/
