@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let t = 100;
+        let z = 398;
+        
+        console.log(t+z)
+
+        function sumTwo(s,t) {
+            if(s<2) {
+                console.log('The first number is less than 2')
+            }
+            sum = s + t
+            return sum
+        }
+        console.log(sumTwo(1,1))
+
+    let countries = ['Ukraine', 'Australia', 'Germany', 'Poland', 'Austria']
+    console.log(countries[3])
+
+    function countr(countries) {
+        if (countries.length < 7) {
+            console.log('The array is too short')
+        }
+    }
+    countr(countries)
+
+    function calculate(num1,num2,operation) {
+        if (operation == '+') {
+            result = num1 + num2
+            console.log("The result of this operation is", result)     
+        }
+
+        else if(operation == '-') {
+            result = num1 - num2
+            console.log("The result of this operation is", result)    
+        }
+        
+        else if(operation == '*') {
+            result = num1 * num2
+            console.log("The result of this operation is", result)     
+        }
+
+        else if (operation == '/') {
+            if (num2 === 0) {
+                console.log("Invalid divisor, must not be equal to zero")
+            }
+
+            else {
+            result = num1 / num2
+            console.log("The result of this operation is", result)   
+            }
+        }
+    }
+    
+         calculate(10, 0,'/')
+
+
+         function calendar(month, temperature) {
+            let seasonStatement;
+            if ((month === "December" || month === "January" || month === "February") && temperature <= 0) {
+                seasonStatement = "It's winter here";
+            } else if ((month === "September" || month === "November" || month === "October") && temperature > 0 && temperature <=20) {
+                seasonStatement = "It's autumn here";
+            } else if ((month === "March" || month === "May" || month === "April") && temperature > 0 && temperature <= 20) {
+                seasonStatement = "It's spring here";
+            } else if ((month === "June" || month === "July" || month === "August") && temperature > 20) {
+                seasonStatement = "It's summer here";
+            } else {
+                console.log("Enter valid value, one of months and the temperature");
+                seasonStatement = "Invalid input"}
+            return seasonStatement;
+        }
+        console.log(calendar("March"));
+    </script>
+</body>
+</html>
