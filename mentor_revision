@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+'''game rock, scissors paper'''
+
+        function game(userMaterial){
+
+            let arrayMaterial = ['rock', 'paper', 'scissors']
+            let computerMaterialIndex = Math.floor(Math.random()*arrayMaterial.length)
+            let computerMaterial= arrayMaterial[computerMaterialIndex]
+            console.log(computerMaterial)
+            if (computerMaterial === userMaterial) {
+                console.log ("It's a draw")
+            }
+            else if((userMaterial == 'rock' && computerMaterial == 'paper')||(userMaterial == 'scissors' && computerMaterial == 'rock')||(userMaterial == 'paper' && computerMaterial == 'scissors')) {
+                console.log('You have lost!')
+            }
+            else{
+                console.log('Congratulations! You won!')
+            }
+
+        }
+        game('rock')
+
+/// function to print even numbers
+
+    let array1 = ['Java', 'JavaScript', 'Python', "C#"]
+    for (let i=1; i<array1.length; i+=2) {
+        console.log(array1[i])
+    }
+///prints odd numbers
+    let array2 = ['Java', 'JavaScript', 'Python', "C#"]
+    for (let i=0; i<array1.length; i++) {
+        if(i%2!==0){console.log(array1[i])}
+    }
+///sums numbers
+    let array3 = [100, 66, 77, 88, 100]
+    let sum = 0
+    for (let i=0; i<array3.length; i++) {
+        sum+=array3[i]
+    }
+    console.log(sum)
+
+    </script>
+</body>
+</html>
