@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ///returns the array from input numbers
+        function fillArray(array) {
+            let newArray = [];
+            for (let i = 0; i < array.length; i++) {
+                newArray.push(array[i]);
+            }
+            return newArray;
+        }
+        ///console.log(fillArray([6, 8, 9]));
+       ///console.log(typeof fillArray([6, 8, 9]));
+
+        function analyseArray(array) {
+            let newArray2 = Array.from(array);  // Make a copy of the array
+            let negCount = 0;
+            let posCount = 0;
+            let zeroCount = 0;
+
+            for (let newArIndex = 0; newArIndex < newArray2.length; newArIndex++) {
+                if (newArray2[newArIndex] > 0) {
+                    posCount += 1;
+                } else if (newArray2[newArIndex] < 0) {
+                    negCount += 1;
+                } else {
+                    zeroCount += 1;
+                }
+            }
+
+            // Return counts as an object or array
+            return {
+                workingArray: newArray2,
+                positive: posCount,
+                negative: negCount,
+                zero: zeroCount
+            };
+        }
+
+        // Testing analyseArray with a valid array
+        const testArray = fillArray([6, -8, 0, 9, -2, 0]);
+        const result = analyseArray(testArray);
+        console.log(result);  // Output the analysis result
+    </script>
+</body>
+</html>
