@@ -1,0 +1,28 @@
+let weather = 'sunny'
+
+switch (weather)
+{
+  case 'sunny'||'hot':
+    console.log ('Make sure you\'re properly hydrated, drink water not coffee, put on sun screen, this is Australia, baby!');
+    break;
+
+  case 'rainy':
+    console.log ("Find your umbrella and don't forget to take it!");
+    break;
+
+  case 'windy':
+    console.log ('Better not let your hair down and do not open your umbrella, you are not Mary Poppins, mate!')
+    break;
+
+  case 'foggy':
+    console.log ('Watch out while driving, do not race if you want to live.');
+    break;
+
+  case 'flood':
+    console.log ('You\'d better leave this area, if not possible, climb the upper floor, fix all object which can float on water and cause an injury, switch off electricity, make food and medication accessible near you. Think of your pets too.');
+    break;
+
+default:
+  console.log ('Undefined weather conditions, google this weather or ask chatGPT');
+  break;
+}
