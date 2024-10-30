@@ -1,0 +1,21 @@
+/* shape-area.js */
+const PI = Math.PI;
+
+// Define and export circleArea() and squareArea() below
+
+function circleArea(radiusLength) {
+  return PI * radiusLength * radiusLength 
+};
+
+function squareArea(sideLength) {
+  return sideLength * sideLength
+};
+
+//export as object
+module.exports = {
+  circleArea,
+squareArea}
+
+//or
+//deconstruction with require()
+{circleArea, squareArea} = require('./shape-area.js')
